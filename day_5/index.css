@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Noto+Sans+NKo+Unjoined&family=Nunito:wght@300&display=swap');
+@import '../css_padrão.css';
+
+/* 
+amarelo : #F1BA64;
+
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.title-graph {
+    width: 100%;
+    height: 20%;
+    background-color: #F1BA64;
+    color: white;
+    padding: 10px;
+    padding: 30px;
+    display: flex;
+}
+
+.title {
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 5px;
+}
+
+.end {
+    align-items: end;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    gap: 25px;
+}
+
+.icon-graph::before {
+    content : '';
+    display: inline-block;
+    width: 10px;
+    position: relative;
+    right: 5px;
+    height: 4px;
+    border-radius: 20px;
+}
+
+.red::before  {
+    background-color: #d45a3b;
+}
+.blue::before  {
+    background-color: #442ab6;
+}
+
+.dados {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.123);
+    display: block;
+    position: absolute;
+    top: 110px;
+    z-index: 1000;
+}
+
+.line-2 {
+    top: calc(100px + 80px * 1);
+}
+
+.line-3 {
+    top: calc(100px + 80px * 2);
+}

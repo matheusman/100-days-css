@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title-graph">
+          <div class="flex">
+            <h3 class="title">WEEKLY REPORT</h3>
+            <p>0.1 Feb - 07. Feb</p>
+          </div>
+          <div class="flex end">
+            <p>Revenue</p>
+            <h3 class="title">$ 3621.79</h3>
+          </div>
+        </div>
+        <div class="icons">
+          <p class="icon-graph red">Views</p>
+          <p class="icon-graph blue">Purchases</p>
+        </div>
+        <canvas
+          width="350px"
+          height="230px"
+          style="position : relative;"
+        >
+      </canvas>
+      <div class="line"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+
+        <div class="dados">
+          <p>MON</p>
+          <p>TUE</p>
+          <p>WED</p>
+          <p>THU</p>
+          <p>FRI</p>
+          <p>SAT</p>
+          <p>SUN</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
+
+      function lineStokeBlue(x, y, lineX, lineY) {
+        ctx.beginPath();
+        ctx.moveTo(x , y );
+        ctx.lineTo(lineX, lineY);
+        ctx.strokeStyle = '#442ab6'
+        ctx.fillStyle = '#442ab6'
+        ctx.stroke();
+
+        ctx.beginPath()
+        ctx.arc(lineX, lineY, 5, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fill()
+
+      }
+
+      function lineStokeRed(x, y, lineX, lineY) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(lineX, lineY);
+        ctx.strokeStyle = '#d45a3b'
+        ctx.fillStyle = '#d45a3b'
+        ctx.stroke();
+
+        ctx.beginPath()
+        ctx.arc(lineX, lineY, 5, 0, Math.PI * 2)
+        ctx.stroke()
+        ctx.fill()
+      }
+
+      lineStokeBlue(4, 120, 50, 110)
+      lineStokeBlue(50, 110, 100, 150)
+      lineStokeBlue(100, 150, 150, 130)
+      lineStokeBlue(150, 130, 200, 140)
+      lineStokeBlue(200, 140, 250, 140)
+      lineStokeBlue(250, 140, 300, 150)
+      lineStokeBlue(300, 150, 350, 200)
+
+      lineStokeRed(4, 130, 50, 140)
+      lineStokeRed(50, 140, 100, 180)
+      lineStokeRed(100, 180, 150, 210)
+      lineStokeRed(150, 210, 200, 180)
+      lineStokeRed(200, 180, 250, 190)
+      lineStokeRed(250, 190, 300, 180)
+      lineStokeRed(300, 180, 350, 190)
+    </script>
+  </body>
+</html>
